@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test site</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/libs/animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="shortcut icon" href="#">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="my-scrollbar">
         <header>
             <div class="container">
                 <div class="menu" id="menu">
                     <div class="block">
                         <div class="left">LOGO</div>
                         <div class="right">
-                            <button class="b1">KONTAKT</button>
+                            <a href=""><button class="b1">KONTAKT</button></a>
+                            <div class="navbar">
+                                <a class="nav" href=""><button class="b1">Contacts</button></a>
+                                <a class="nav" href=""><button class="b1">About us</button></a>
+                            </div>
                             <button class="b2">
                                 <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <line y1="0.5" x2="20" y2="0.5" stroke="black"/>
@@ -44,7 +50,7 @@
             <div class="container">
                 <div class="block">
                     <div class="left">
-                        <img src="img/sec3.png" alt="">
+                        <img src="img/sec3.jpg" alt="">
                     </div>
                     <div class="right">
                         <div class="text">
@@ -60,32 +66,43 @@
                     <div class="title">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar venenatis nisi, quis tincidunt massa tempus suscipit. In hac habitasse platea dictumst. Aenean pretium a lacus eget hendrerit.
                     </div>
-                    <button>
-                        <div class="txt">
-                            LINK
-                            <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="4.37114e-08" y1="6.5" x2="20" y2="6.5" stroke="white"/>
-                                <path d="M15 1L20 6.5L15 12" stroke="white"/>
-                            </svg>  
-                        </div>
-                    </button>
+                    <a href="">
+                        <button>
+                            <div class="txt">
+                                LINK
+                                <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="4.37114e-08" y1="6.5" x2="20" y2="6.5" stroke="white"/>
+                                    <path d="M15 1L20 6.5L15 12" stroke="white"/>
+                                </svg>  
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="section4">
                 <div class="container">
                     <div class="top">
-                        <img class="left" src="img/sec4-left.png" alt="">
-                        <img class="right" src="img/sec4-right.png" alt="">
+                        <img class="left" src="img/sec4-left.jpg" alt="">
+                        <img class="right" src="img/sec4-right.jpg" alt="">
                     </div>
                     <div class="bottom">
-                        <p>HEADER</p><p>HEADER</p>
+                        <p>HEADER</p>
+                        <p>HEADER</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="js/script.js"></script>
     
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+    <script>
+        var Scrollbar = window.Scrollbar;
+      
+        Scrollbar.init(document.querySelector('#my-scrollbar'), { 
+            speed: 2,
+            damping: 0.1, 
+        });
+    </script>
 </body>
 </html>
